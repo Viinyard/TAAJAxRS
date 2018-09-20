@@ -16,21 +16,32 @@
  */
 package fr.istic.taa.jaxrs;
 
+import io.swagger.v3.jaxrs2.integration.resources.OpenApiResource;
+
+import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
 
+@ApplicationPath("/")
 public class TestApplication extends Application {
 
 
     @Override
     public Set<Class<?>> getClasses() {
 
-        final Set<Class<?>> clazzes = new HashSet<Class<?>>();
+        final Set<Class<?>> resources = new HashSet<Class<?>>();
 
-        clazzes.add(StatusEndpoint.class);
+        //clazzes.add(StatusEndpoint.class);
+    
+        resources.add(OpenApiResource.class);
+    
+        resources.add(StatusEndpoint.class);
+    
+        resources.add(SwaggerResource.class);
+        
 
-        return clazzes;
+        return resources;
     }
 
 }

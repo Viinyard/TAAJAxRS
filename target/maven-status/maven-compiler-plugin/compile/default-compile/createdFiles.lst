@@ -1,0 +1,5 @@
+fr/istic/taa/jaxrs/TestApplication.class
+fr/istic/taa/jaxrs/SwaggerResource.class
+fr/istic/taa/jaxrs/domain/Person.class
+fr/istic/taa/jaxrs/RestServer.class
+fr/istic/taa/jaxrs/StatusEndpoint.class

@@ -7,8 +7,17 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>jaxrs-example</name>
 	<url>http://maven.apache.org</url>
-	<dependencies>
 
+	<properties>
+		<!-- Sonar config -->
+		<!-- Maven config -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>10</maven.compiler.source>
+		<maven.compiler.target>10</maven.compiler.target>
+		<!--<dependency.locations.enabled>false</dependency.locations.enabled>-->
+	</properties>
+
+	<dependencies>
 				<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -45,6 +54,13 @@
 		</dependency>
 
 		<!-- ==== REST API ==== -->
+
+		<dependency>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-jaxrs2</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>io.undertow</groupId>
 			<artifactId>undertow-core</artifactId>
@@ -74,8 +90,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.0</version>
 					<configuration>
-					  <source>1.8</source>
-					  <target>1.8</target>
+					  <source>10</source>
+					  <target>10</target>
 					</configuration>
 			      </plugin>
 
